@@ -1,0 +1,49 @@
+[
+
+    {
+        "nomArticle": "Casque AGV",
+        "Description" : "Casque AGV DE OUF",
+        "Prix" : 200,
+        "type" : "casque",
+        "Disponibilite": "non",
+        "PrixPromotion" : "",
+        "image" : "cms-cross.jpeg"
+    },
+    {
+        "nomArticle": "Visere AGV 2",
+        "Description" : "Visere AGV DE OUF 2",
+        "Prix" : 2000,
+        "type" : "casque",
+        "Disponibilite": "oui",
+        "PrixPromotion" : "",
+        "image" : "rio-cross.jpeg"
+    },
+    {
+        "nomArticle": "Blouson",
+        "Description" : "Blouson ",
+        "Prix" : 4000,
+        "type" : "Blouson",
+        "Disponibilite": "oui",
+        "PrixPromotion" : "",
+        "image" : "blouson.jpeg"
+    },
+    {
+        "nomArticle": "Blouson",
+        "Description" : "Blouson ",
+        "Prix" : 4000,
+        "type" : "Blouson",
+        "Disponibilite": "oui",
+        "PrixPromotion" : "",
+        "image" : "blouson.jpeg"
+    },
+    {
+        "nomArticle": "Blouson",
+        "Description" : "Blouson ",
+        "Prix" : 4000,
+        "type" : "Blouson",
+        "Disponibilite": "oui",
+        "PrixPromotion" : "",
+        "image" : "blouson.jpeg"
+    }
+
+]
