@@ -11,12 +11,11 @@ export default class App extends Component {
         return (
             <>
                 <div className='row'>
-                    {/* <div className='col-md-3'>
-                        <ul className='navbar-nav bg-light border rounded p-2 m-4'>
-                            <li className='nav-item'><i className='fa fa-home'> </i><Link to="/">Home</Link></li>
-                            <li className='nav-item'><Link to="Boutique">Boutique</Link></li>
-                        </ul>
-                    </div> */}
+                    <div className='col-md-3'>
+                        <Routes>
+                            <Route path="/" element={<Home />} />
+                        </Routes>
+                    </div>
                     <div className='col'>
                         <Routes>
                             <Route path="/" element={<Home />} />
@@ -138,7 +137,7 @@ class Boutique extends React.Component {
                                             {this.state.Typep === 'Tous' ? data.map((element) => {
 
                                                 return (
-                                                    <div class="col-sm-3 shadow justify-content-center text-center p-3 m-3 rounded">
+                                                    <div class="col-sm-2 shadow justify-content-center text-center p-3 m-3 rounded">
                                                         <div class="thumb-wrapper">
                                                             <div class="img-box">
                                                                 <img src={"images/" + element.type + "/" + element.image} class="img-fluid w-75 rounded" alt="Une erreur s'est produite lors du chargement de l'image !" />
