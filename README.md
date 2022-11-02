@@ -1,3 +1,3 @@
 # PrestigeBike
 
-Require : npm install react-router-dom , npm install reactjs-popup --save , npm install jquery --save , npm install bootstrap
+Require : npm install react-router-dom , npm install react-responsive-carousel (Not sur) , npm install bootstrap , npm install mdb-react-ui-kit , npm i -S react-scroll

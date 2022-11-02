@@ -12,6 +12,10 @@ code {
     monospace;
 }
 
+html{
+  scroll-behavior: smooth;
+}
+
 
 .acceuilnav:hover, .boutiquenav:hover{
   animation: changeBackgroundColor 4s infinite;
@@ -30,6 +34,82 @@ code {
 }
 
 
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+
+.FirstDivTexte{
+
+  width: 100%;
+  height: 60%;
+  font-family: 'Roboto', sans-serif;
+  font-size: 30px;
+
+}
+
+.SecondDiv{
+  background-color: #c5dbfb;
+
+}
+
+.SecondDivImg{
+  background-image: url('../public/images/tracer.png');
+  width: 90%;
+  height: 90%;
+  background-repeat: no-repeat;
+  background-size: contain;
+  font-size: 80px;
+  
+  
+  
+}
+
+.SecondDivImgP{
+  position: relative;
+  top: 40%;
+  
+}
 
 
 
+.title {
+  font-family: "Cairo";
+  text-align: center;
+  color: #FFF;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  letter-spacing: 1px;
+  line-height:2
+}
+
+.texteanimationback {
+  background-image: url(https://media.giphy.com/media/bLdgTj2jCKe9Wf94Km/giphy.gif);
+  background-size: cover;
+  color: transparent;
+  -moz-background-clip: text;
+  -webkit-background-clip: text;
+  text-transform: uppercase;
+  font-size: 120px;
+  margin: 10px 0;
+}
+/* styling my button */
+
+.white-mode {
+  text-decoration: none;
+  padding: 7px 10px;
+  background-color: #122;
+  border-radius: 3px;
+  color: #FFF;
+  transition: .35s ease-in-out;
+  position: absolute;
+  left: 15px;
+  bottom: 15px;
+  font-family: "Montserrat";
+}
+
+.white-mode:hover {
+  background-color: #FFF;
+  color: #122;
+}

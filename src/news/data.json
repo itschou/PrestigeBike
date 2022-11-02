@@ -40,7 +40,7 @@
         "image" : "blouson3.jpeg"
     },
     {
-        "nomArticle": "Blouson",
+        "nomArticle": "Blouson SUZUKI",
         "Description" : "Blouson ",
         "Prix" : 4000,
         "type" : "Blouson",
@@ -52,8 +52,8 @@
 
 
     {
-        "nomArticle": "Blouson",
-        "Description" : "Blouson ",
+        "nomArticle": "Bottes alpinstar",
+        "Description" : "Bottes ",
         "Prix" : 4000,
         "type" : "bottes",
         "Disponibilite": "oui",
