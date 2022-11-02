@@ -13,5 +13,23 @@ code {
 }
 
 
+.acceuilnav:hover, .boutiquenav:hover{
+  animation: changeBackgroundColor 4s infinite;
+}
+
+@keyframes changeBackgroundColor {
+  0% {
+    color: #488dd1;
+  }
+  50% {
+    color: #3cedd2;
+  }
+  100% {
+    color: #6c849c;
+  }
+}
+
+
+
 
 

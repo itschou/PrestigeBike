@@ -10,14 +10,17 @@
         "image" : "cms-cross.jpeg"
     },
     {
-        "nomArticle": "Visere AGV 2",
-        "Description" : "Visere AGV DE OUF 2",
+        "nomArticle": "Casque AGV 2",
+        "Description" : "Casque AGV DE OUF 2",
         "Prix" : 2000,
         "type" : "casque",
         "Disponibilite": "oui",
         "PrixPromotion" : "",
         "image" : "rio-cross.jpeg"
     },
+
+
+
     {
         "nomArticle": "Blouson",
         "Description" : "Blouson ",
@@ -34,7 +37,7 @@
         "type" : "Blouson",
         "Disponibilite": "oui",
         "PrixPromotion" : "",
-        "image" : "blouson.jpeg"
+        "image" : "blouson3.jpeg"
     },
     {
         "nomArticle": "Blouson",
@@ -43,7 +46,19 @@
         "type" : "Blouson",
         "Disponibilite": "oui",
         "PrixPromotion" : "",
-        "image" : "blouson.jpeg"
+        "image" : "blouson-suzuki.jpeg"
+    },
+
+
+
+    {
+        "nomArticle": "Blouson",
+        "Description" : "Blouson ",
+        "Prix" : 4000,
+        "type" : "bottes",
+        "Disponibilite": "oui",
+        "PrixPromotion" : "",
+        "image" : "image00003.jpeg"
     }
 
 ]
