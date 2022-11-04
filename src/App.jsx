@@ -154,7 +154,7 @@ class Home extends React.Component {
                             {/* <img src="images/harleymoteur.png" alt="Un problème est survenu lors du chargement de l'image" className='img-fluid float-start' /> */}
                             <br /><br /><br /><br /><br /><br /><br /><br />
                             <h1 className='text-light text-center text-uppercase'>notre atelier de réparation</h1>
-                            <h4 className='text-white'>Nous réparons tous types de moto dans des délais express avec une qualité de service irréprochable.</h4>
+                            <h4 className='text-white text-center'>Nous réparons tous types de moto dans des délais express avec une qualité de service irréprochable.</h4>
                             <p className='text-success text-center'>Nous proposons aussi des pièces de rechange et des accessoires de mise à niveau.</p>
                         </div>
                         <div className='col'>
