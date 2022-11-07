@@ -6,7 +6,8 @@ import './index.css';
 
 import data from './news/data.json';
 import config from './news/config.json';
-import {animateScroll as scroll } from "react-scroll";
+import { animateScroll as scroll } from "react-scroll";
+const fs = require('fs')
 
 
 
@@ -19,6 +20,7 @@ import {
 
 
 var somme = 0;
+var pather = './news/data.json';
 
 
 
@@ -37,6 +39,7 @@ export default class App extends Component {
                         <Routes>
                             <Route path="/" element={<Home />} />
                             <Route path="/boutique" element={<Boutique />} />
+                            <Route path="/add" element={<AddProducts />} />
                         </Routes>
                     </div>
 
@@ -127,7 +130,7 @@ class Home extends React.Component {
                         </div>
 
                     </div>
-                <br /><br />
+                    <br /><br />
                 </div>
                 <br /><br />
 
@@ -158,7 +161,7 @@ class Home extends React.Component {
                             <p className='text-success text-center'>Nous proposons aussi des pièces de rechange et des accessoires de mise à niveau.</p>
                         </div>
                         <div className='col'>
-                            <img src="images/cbr.png" alt="Un problème est survenu lors du chargement de l'image" className='img-fluid float-start' /> 
+                            <img src="images/cbr.png" alt="Un problème est survenu lors du chargement de l'image" className='img-fluid float-start' />
                         </div>
 
                     </div>
@@ -222,10 +225,10 @@ class Boutique extends React.Component {
                                                             </div>
                                                             <div className='thumb-content'>
                                                                 <h4 className='text-uppercase'>{element.nomArticle}</h4>
-                                                                <p className='card-text bg-light rounded text-success'><b>{element.Prix} DH</b></p>
+                                                                <p className='card-text bg-light rounded text-success'><b>{element.Prix} DH</b> {element.PrixPromotion === "" ? <strong><strike><i className='text-danger'></i></strike></strong> : <strong><strike><i className='text-danger'>{element.PrixPromotion}</i></strike></strong>}</p>
                                                                 <p className='text-dark text-uppercase p-2'>{element.Description}</p>
                                                                 <p className='item-price'> <div className='col'>
-                                                                    {element.Disponibilite === "oui" ? <button type="button" className='btn btn-primary btn-block' onClick={() => { document.getElementById('sommeall').innerHTML = "Total : " + (somme += element.Prix) + "DH" }}>Ajouter</button> : <button type="button" className='btn btn-danger btn-block' onClick={() => alert('Désolé mais ce produit est épuisé !')}>ÉPUISÉ</button>} {element.PrixPromotion === "" ? <strong><strike><i className='text-danger'></i></strike></strong> : <strong><strike><i className='text-danger'>{element.PrixPromotion}</i></strike></strong>}
+                                                                    {element.Disponibilite === "oui" ? <button type="button" className='btn btn-primary btn-block' onClick={() => { document.getElementById('sommeall').innerHTML = "Total : " + (somme += element.Prix) + "DH" }}>Ajouter</button> : <button type="button" className='btn btn-danger btn-block' onClick={() => alert('Désolé mais ce produit est épuisé !')}>ÉPUISÉ</button>}
                                                                 </div></p>
                                                             </div>
                                                         </div>
@@ -246,9 +249,9 @@ class Boutique extends React.Component {
                                                             </div>
                                                             <div className='thumb-content'>
                                                                 <h4 className='text-uppercase'>{element.nomArticle}</h4>
-                                                                <p className='card-text bg-light rounded text-success'><b>{element.Prix} DH</b></p>
+                                                                <p className='card-text bg-light rounded text-success'><b>{element.Prix} DH</b> {element.PrixPromotion === "" ? <strong><strike><i className='text-danger'></i></strike></strong> : <strong><strike><i className='text-danger'>{element.PrixPromotion}</i></strike></strong>}</p>
                                                                 <p className='item-price'> <div className='col'>
-                                                                    {element.Disponibilite === "oui" ? <button type="button" className='btn btn-primary btn-block' onClick={() => { document.getElementById('sommeall').innerHTML = "Total : " + (somme += element.Prix) + "DH" }}>Ajouter</button> : <button type="button" className='btn btn-danger btn-block' onClick={() => alert('Désolé mais ce produit est épuisé !')}>ÉPUISÉ</button>} {element.PrixPromotion === "" ? <strong><strike><i className='text-danger'></i></strike></strong> : <strong><strike><i className='text-danger'>{element.PrixPromotion}</i></strike></strong>}
+                                                                    {element.Disponibilite === "oui" ? <button type="button" className='btn btn-primary btn-block' onClick={() => { document.getElementById('sommeall').innerHTML = "Total : " + (somme += element.Prix) + "DH" }}>Ajouter</button> : <button type="button" className='btn btn-danger btn-block' onClick={() => alert('Désolé mais ce produit est épuisé !')}>ÉPUISÉ</button>}
                                                                 </div></p>
                                                             </div>
                                                         </div>
@@ -277,4 +280,113 @@ class Boutique extends React.Component {
 
         )
     }
+}
+
+
+class AddProducts extends React.Component {
+    constructor() {
+        super();
+    }
+    
+
+    addProduit() {
+
+        if (document.getElementById('codePush').value == "test") {
+            // data.push({
+            //     nomArticle: document.getElementById('nomarticle').value,
+            //     Description: document.getElementById('descarticle').value,
+            //     Prix: document.getElementById('prixarticle').value,
+            //     type: document.getElementById('typearticle').value,
+            //     Disponibilite: document.getElementById('dispoarticle').value,
+            //     PrixPromotion: document.getElementById('prixpromoarticle').value,
+            //     image: document.getElementById('imagearticle').value
+
+            // });
+
+            const produit = {
+                nomArticle: document.getElementById('nomarticle').value,
+                Description: document.getElementById('descarticle').value,
+                Prix: document.getElementById('prixarticle').value,
+                type: document.getElementById('typearticle').value,
+                Disponibilite: document.getElementById('dispoarticle').value,
+                PrixPromotion: document.getElementById('prixpromoarticle').value,
+                image: document.getElementById('imagearticle').value
+            }
+
+            const jsonString = JSON.stringify(customer)
+            fs.writeFile(pather, jsonString, err => {
+                if (err) {
+                    console.log('Error writing file', err)
+                } else {
+                    console.log('Successfully wrote file')
+                }
+            })
+            
+           
+        } else {
+            alert('Désolé mais votre mot de passe est incorrect')
+        }
+
+    }
+
+    render() {
+        return (
+
+
+            <div>
+
+                <h1 className='text-light text-center'>Ajouter un article</h1>
+                <div className='row'>
+                    <div className='col'>
+
+                    </div>
+
+
+
+                    <div className='col'>
+                        <form>
+
+                            <label htmlFor="nomarticle" className='text-light'>Nom de l'article</label>
+                            <input type="text" name="" id="nomarticle" className='form-control w-100' required /><br />
+
+                            <label htmlFor="descarticle" className='text-light'>Description de l'article</label>
+                            <input type="text" name="" id="descarticle" className='form-control w-100' required /><br />
+
+                            <label htmlFor="prixarticle" className='text-light'>Prix de l'article</label>
+                            <input type="text" name="" id="prixarticle" className='form-control w-100' required /><br />
+
+                            <label htmlFor="typearticle" className='text-light'>Type de l'article</label>
+                            <input type="text" name="" id="typearticle" className='form-control w-100' required /><br />
+
+                            <label htmlFor="dispoarticle" className='text-light'>Disponibilité de l'article</label>
+                            <select name="" id="dispoarticle" className='form-control w-100' required><option value="oui">Oui</option><option value="non">Non</option></select><br />
+
+                            <label htmlFor="prixpromoarticle" className='text-light'>Prix promotion de l'article</label>
+                            <input type="text" name="" id="prixpromoarticle" className='form-control w-100' placeholder='Laissez vide si aucune promotion est disponible' /><br />
+
+                            <label htmlFor="imagearticle" className='text-light'>Image de l'article</label>
+                            <input type="file" name="" id="imagearticle" className='form-control w-100' required /><br /><br />
+
+                            <label htmlFor="codePush" className='text-light'>Veuillez entrer le code</label>
+                            <input type="text" name="" id="codePush" className='form-control w-100' required /><br />
+
+
+
+                            <input type="submit" onClick={() => this.addProduit()} />
+                        </form>
+                    </div>
+
+                    <div className='col'>
+
+                    </div>
+                </div>
+
+
+
+
+            </div>
+
+        );
+    }
+
 }

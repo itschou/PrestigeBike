@@ -1,64 +1,49 @@
 [
-
     {
-        "nomArticle": "Casque AGV",
-        "Description" : "Casque AGV DE OUF",
-        "Prix" : 200,
-        "type" : "casque",
-        "Disponibilite": "non",
-        "PrixPromotion" : "",
-        "image" : "cms-cross.jpeg"
-    },
-    {
-        "nomArticle": "Casque AGV 2",
-        "Description" : "Casque AGV DE OUF 2",
-        "Prix" : 2000,
-        "type" : "casque",
-        "Disponibilite": "oui",
-        "PrixPromotion" : "",
-        "image" : "rio-cross.jpeg"
-    },
-
-
-
-    {
-        "nomArticle": "Blouson",
-        "Description" : "Blouson ",
-        "Prix" : 4000,
+        "nomArticle": "Blouson bering (POUR HOMME)",
+        "Description" : "Taille : M ",
+        "Prix" : 1950,
         "type" : "Blouson",
         "Disponibilite": "oui",
-        "PrixPromotion" : "",
+        "PrixPromotion" : "3400",
         "image" : "blouson.jpeg"
     },
     {
-        "nomArticle": "Blouson",
-        "Description" : "Blouson ",
-        "Prix" : 4000,
+        "nomArticle": "Blouson VQUATTRO (POUR FEMME)",
+        "Description" : "Taille : XL ",
+        "Prix" : 1450,
         "type" : "Blouson",
         "Disponibilite": "oui",
-        "PrixPromotion" : "",
+        "PrixPromotion" : "1700",
         "image" : "blouson3.jpeg"
     },
     {
-        "nomArticle": "Blouson SUZUKI",
-        "Description" : "Blouson ",
-        "Prix" : 4000,
+        "nomArticle": "Blouson suzuki (POUR homme)",
+        "Description" : "Taille : L (occasion)",
+        "Prix" : 1200,
         "type" : "Blouson",
         "Disponibilite": "oui",
         "PrixPromotion" : "",
         "image" : "blouson-suzuki.jpeg"
     },
-
-
-
     {
-        "nomArticle": "Bottes alpinstar",
-        "Description" : "Bottes ",
-        "Prix" : 4000,
-        "type" : "bottes",
+        "nomArticle": "casque rio cross",
+        "Description" : "Taille : M",
+        "Prix" : 750,
+        "type" : "casque",
         "Disponibilite": "oui",
         "PrixPromotion" : "",
-        "image" : "image00003.jpeg"
+        "image" : "rio-cross.jpeg"
+    },
+    {
+        "nomArticle": "casque cms cross",
+        "Description" : "Taille : S/M/L/XL | Couleurs : Rouge / Blanc / Jaune",
+        "Prix" : 870,
+        "type" : "casque",
+        "Disponibilite": "oui",
+        "PrixPromotion" : "",
+        "image" : "cms-cross.jpeg"
     }
+
 
 ]
