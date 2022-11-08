@@ -7,7 +7,10 @@ import './index.css';
 import data from './news/data.json';
 import config from './news/config.json';
 import { animateScroll as scroll } from "react-scroll";
-const fs = require('fs')
+
+
+
+
 
 
 
@@ -17,6 +20,7 @@ import {
     MDBCarouselItem,
 } from 'mdb-react-ui-kit';
 
+// const fs = require("fs");
 
 
 var somme = 0;
@@ -290,20 +294,13 @@ class AddProducts extends React.Component {
     
 
     addProduit() {
+        
 
         if (document.getElementById('codePush').value == "test") {
-            // data.push({
-            //     nomArticle: document.getElementById('nomarticle').value,
-            //     Description: document.getElementById('descarticle').value,
-            //     Prix: document.getElementById('prixarticle').value,
-            //     type: document.getElementById('typearticle').value,
-            //     Disponibilite: document.getElementById('dispoarticle').value,
-            //     PrixPromotion: document.getElementById('prixpromoarticle').value,
-            //     image: document.getElementById('imagearticle').value
 
-            // });
 
-            const produit = {
+
+            const produit = [...data, {
                 nomArticle: document.getElementById('nomarticle').value,
                 Description: document.getElementById('descarticle').value,
                 Prix: document.getElementById('prixarticle').value,
@@ -311,16 +308,19 @@ class AddProducts extends React.Component {
                 Disponibilite: document.getElementById('dispoarticle').value,
                 PrixPromotion: document.getElementById('prixpromoarticle').value,
                 image: document.getElementById('imagearticle').value
-            }
+            }]
 
-            const jsonString = JSON.stringify(customer)
-            fs.writeFile(pather, jsonString, err => {
-                if (err) {
-                    console.log('Error writing file', err)
-                } else {
-                    console.log('Successfully wrote file')
-                }
-            })
+
+
+
+            // const jsonString = JSON.stringify(produit)
+            // fs.writeFile(pather, jsonString, err => {
+            //     if (err) {
+            //         console.log('Error writing file', err)
+            //     } else {
+            //         console.log('Successfully wrote file')
+            //     }
+            // })
             
            
         } else {
@@ -344,7 +344,7 @@ class AddProducts extends React.Component {
 
 
                     <div className='col'>
-                        <form>
+                        <form onSubmit={() => this.addProduit()}>
 
                             <label htmlFor="nomarticle" className='text-light'>Nom de l'article</label>
                             <input type="text" name="" id="nomarticle" className='form-control w-100' required /><br />
@@ -372,7 +372,7 @@ class AddProducts extends React.Component {
 
 
 
-                            <input type="submit" onClick={() => this.addProduit()} />
+                            <input type="submit" />
                         </form>
                     </div>
 
@@ -390,3 +390,13 @@ class AddProducts extends React.Component {
     }
 
 }
+var fs = require("fs");
+
+
+// class test extends React.Component{
+//     render(){
+//         return(
+//             <button onClick={()=> {writeJsonFile('./date.json', { foo: true })}}>click</button>
+//         )
+//     }
+// }
