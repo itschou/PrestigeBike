@@ -273,9 +273,6 @@ class Boutique extends React.Component {
 
 
 class AddProducts extends React.Component {
-    constructor() {
-        super();
-    }
     
 
     addProduit() {
