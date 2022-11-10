@@ -1,32 +1,17 @@
 import React, { Component } from 'react';
-import { Routes, Route, Link } from 'react-router-dom';
+import { Routes, Route } from 'react-router-dom';
 import './index.css';
-
-
 
 import data from './news/data.json';
 import config from './news/config.json';
-import { animateScroll as scroll } from "react-scroll";
-
-
-
-
-
-
-
+import axios from 'axios';
 
 import {
     MDBCarousel,
     MDBCarouselItem,
 } from 'mdb-react-ui-kit';
 
-// const fs = require("fs");
-
-
 var somme = 0;
-var pather = './news/data.json';
-
-
 
 export default class App extends Component {
 
@@ -300,27 +285,17 @@ class AddProducts extends React.Component {
 
 
 
-            const produit = [...data, {
-                nomArticle: document.getElementById('nomarticle').value,
-                Description: document.getElementById('descarticle').value,
-                Prix: document.getElementById('prixarticle').value,
-                type: document.getElementById('typearticle').value,
-                Disponibilite: document.getElementById('dispoarticle').value,
-                PrixPromotion: document.getElementById('prixpromoarticle').value,
-                image: document.getElementById('imagearticle').value
-            }]
+            // const produit = [...data, {
+            //     nomArticle: document.getElementById('nomarticle').value,
+            //     Description: document.getElementById('descarticle').value,
+            //     Prix: document.getElementById('prixarticle').value,
+            //     type: document.getElementById('typearticle').value,
+            //     Disponibilite: document.getElementById('dispoarticle').value,
+            //     PrixPromotion: document.getElementById('prixpromoarticle').value,
+            //     image: document.getElementById('imagearticle').value
+            // }]
 
-
-
-
-            // const jsonString = JSON.stringify(produit)
-            // fs.writeFile(pather, jsonString, err => {
-            //     if (err) {
-            //         console.log('Error writing file', err)
-            //     } else {
-            //         console.log('Successfully wrote file')
-            //     }
-            // })
+            axios.post(data, { answer: 42 });
             
            
         } else {
@@ -344,7 +319,7 @@ class AddProducts extends React.Component {
 
 
                     <div className='col'>
-                        <form onSubmit={() => this.addProduit()}>
+                        <form onSubmit={() => this.addProduit}>
 
                             <label htmlFor="nomarticle" className='text-light'>Nom de l'article</label>
                             <input type="text" name="" id="nomarticle" className='form-control w-100' required /><br />
@@ -390,7 +365,7 @@ class AddProducts extends React.Component {
     }
 
 }
-var fs = require("fs");
+// var fs = require("fs");
 
 
 // class test extends React.Component{
