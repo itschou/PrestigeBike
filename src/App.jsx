@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Routes, Route } from 'react-router-dom';
+import { Routes, Route, BrowserRouter } from 'react-router-dom';
 import './index.css';
 
 import data from './news/data.json';
@@ -25,11 +25,13 @@ export default class App extends Component {
                         </Routes>
                     </div> */}
                     <div className='col'>
+                    <BrowserRouter>
                         <Routes>
                             <Route path="/" element={<Home />} />
                             <Route path="/boutique" element={<Boutique />} />
                             <Route path="/add" element={<AddProducts />} />
                         </Routes>
+                        </BrowserRouter>
                     </div>
 
                 </div>
@@ -273,26 +275,20 @@ class Boutique extends React.Component {
 
 
 class AddProducts extends React.Component {
-    
 
     addProduit() {
-        
-
         if (document.getElementById('codePush').value == "test") {
 
-
-
-            // const produit = [...data, {
-            //     nomArticle: document.getElementById('nomarticle').value,
-            //     Description: document.getElementById('descarticle').value,
-            //     Prix: document.getElementById('prixarticle').value,
-            //     type: document.getElementById('typearticle').value,
-            //     Disponibilite: document.getElementById('dispoarticle').value,
-            //     PrixPromotion: document.getElementById('prixpromoarticle').value,
-            //     image: document.getElementById('imagearticle').value
-            // }]
-
-            axios.post(data, { answer: 42 });
+            const produit = {
+                nomArticle: document.getElementById('nomarticle').value,
+                Description: document.getElementById('descarticle').value,
+                Prix: document.getElementById('prixarticle').value,
+                type: document.getElementById('typearticle').value,
+                Disponibilite: document.getElementById('dispoarticle').value,
+                PrixPromotion: document.getElementById('prixpromoarticle').value,
+                image: document.getElementById('imagearticle').value
+            }
+            axios.post('http://localhost:3003/produits', produit);
             
            
         } else {
@@ -347,6 +343,8 @@ class AddProducts extends React.Component {
                             <input type="submit" />
                         </form>
                     </div>
+
+                    <button onClick={() => this.addProduit()}>dd</button>
 
                     <div className='col'>
 

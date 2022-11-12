@@ -1,0 +1,24 @@
+{
+  "produits": [
+    {
+      "nomArticle": "yuuyuyu",
+      "Description": "uyuyuy",
+      "Prix": "uuuyuyuy",
+      "type": "uyuyuy",
+      "Disponibilite": "oui",
+      "PrixPromotion": "yuyuuyu",
+      "image": "C:\\fakepath\\1171987.jpg",
+      "id": 1
+    },
+    {
+      "nomArticle": "yuuyuyu",
+      "Description": "uyuyuyk",
+      "Prix": "uuuyuyuy",
+      "type": "uyuyuy",
+      "Disponibilite": "oui",
+      "PrixPromotion": "yuyuuyu",
+      "image": "C:\\fakepath\\1171987.jpg",
+      "id": 2
+    }
+  ]
+}
