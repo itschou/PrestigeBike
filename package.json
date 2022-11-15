@@ -16,7 +16,7 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "start": "react-scripts start && npm json-server --watch data.json --port 3002",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"

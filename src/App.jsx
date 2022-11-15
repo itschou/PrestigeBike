@@ -2,11 +2,6 @@ import React, { Component, useEffect, useState } from 'react';
 import { Routes, Route, BrowserRouter } from 'react-router-dom';
 import './index.css';
 
-import dataa from './news/data.json';
-
-
-
-// import config from './news/config.json';
 import axios from 'axios';
 
 import {
@@ -16,11 +11,6 @@ import {
 var somme = 0;
 
 const baseURL = "http://localhost:3001/produits";
-const data = axios.get(baseURL)
-
-// axios.get(baseURL).then((response) => {
-//     data = response.data;
-// })
 
 
 export default class App extends Component {
@@ -85,7 +75,7 @@ class Home extends React.Component {
                             <p className='text-light text-center FirstDivTexte'>{configu[0].FirstDiv.Texte}</p>
                         </div>
                         <div className='col'>
-                            <img src="images/pngegg.png" className='float-end' alt="Un problème est survenu lors du chargement de l'image" /><br /><br />
+                            <img src="images/pngegg.png" className="float-end" alt="Un problème est survenu lors du chargement." /><br /><br />
                         </div>
 
                     </div>
@@ -119,7 +109,7 @@ class Home extends React.Component {
                             <p className='text-success text-center'>Nous proposons aussi des pièces de rechange et des accessoires de mise à niveau.</p>
                         </div>
                         <div className='col'>
-                            <img src="images/cbr.png" alt="Un problème est survenu lors du chargement de l'image" className='img-fluid float-start' />
+                            <img src="images/cbr.png" alt="Un problème est survenu lors du chargement." className='img-fluid float-start' />
                         </div>
 
                     </div>
@@ -149,7 +139,7 @@ class AddProducts extends React.Component {
     }
 
     addProduit() {
-        if (document.getElementById('codePush').value == "test") {
+        if (document.getElementById('codePush').value === "test") {
 
             const produit = {
                 nomArticle: document.getElementById('nomarticle').value,
@@ -161,6 +151,8 @@ class AddProducts extends React.Component {
                 image: this.getName()
             }
             axios.post('http://localhost:3001/produits', produit);
+
+
 
 
         } else {
@@ -201,7 +193,7 @@ class AddProducts extends React.Component {
                             <input type="text" id="prixpromoarticle" className='form-control w-100' placeholder='Laissez vide si aucune promotion est disponible' /><br />
 
                             <label htmlFor="imagearticle" className='text-light'>Image de l'article</label>
-                            <input type="file" id="imagearticle" className='form-control w-100' required /><br /><br />
+                            <input type="file" id="imagearticle" accept="image/jpeg, image/png, image/jpg" className='form-control w-100' required /><br /><br />
 
                             <label htmlFor="codePush" className='text-light'>Veuillez entrer le code</label>
                             <input type="text" id="codePush" className='form-control w-100' required /><br />
@@ -263,13 +255,13 @@ function Boutiques() {
                             <div className='carousel-inner'>
                                 <div className='carousel-item active'>
                                     <div className='row'>
-                                        {type == 'Tous' ? articles.map((element, index) => {
+                                        {type === 'Tous' ? articles.map((element, index) => {
 
                                             return (
                                                 <div className='col shadow justify-content-center text-center p-3 m-3 rounded bg-light' key={index}>
                                                     <div className='thumb-wrapper'>
                                                         <div className='img-box'>
-                                                            <img src={"images/" + element.type + "/" + element.image} className='img-fluid w-75 rounded' alt="Une erreur s'est produite lors du chargement de l'image !" />
+                                                            <img src={"images/" + element.type + "/" + element.image} className='img-fluid w-75 rounded' alt="Une erreur s'est produite lors du chargement." />
                                                         </div>
                                                         <div className='thumb-content'>
                                                             <h4 className='text-uppercase'>{element.nomArticle}</h4>
@@ -287,13 +279,13 @@ function Boutiques() {
                                         }
 
 
-                                        ) : articles.filter((item) => item.type == type).map((element, index) => {
+                                        ) : articles.filter((item) => item.type === type).map((element, index) => {
 
                                             return (
                                                 <div className='col-sm-2 shadow justify-content-center text-center p-3 m-3 rounded' key={index}>
                                                     <div className='thumb-wrapper'>
                                                         <div className='img-box'>
-                                                            <img src={"images/" + element.type + "/" + element.image} className='img-fluid w-75 rounded' alt="Une erreur s'est produite lors du chargement de l'image !" />
+                                                            <img src={"images/" + element.type + "/" + element.image} className='img-fluid w-75 rounded' alt="Une erreur s'est produite lors du chargement." />
                                                         </div>
                                                         <div className='thumb-content'>
                                                             <h4 className='text-uppercase'>{element.nomArticle}</h4>
@@ -337,23 +329,15 @@ function Articles() {
         axios.get(baseURL).then((res) => { setArticles(res.data) })
     }, [])
 
-    function show() {
-        console.log(articles)
-
-    }
-
     return (
         <div>
-
-            {/* <button onClick={() => show()}>CLIQUE</button> */}
-
             <div className='container w-50'>
                 <h1 className='text-center text-dark text-uppercase'>Derniers articles</h1><br />
                 <MDBCarousel dark >
                     {
                         articles.map(element => {
                             return (
-                                <MDBCarouselItem className='w-100 rounded' src={"images/" + element.type + "/" + element.image} width='200' alt="Un problème est survenu lors du chargement de l'image" itemId={element.id} key={element.id}>
+                                <MDBCarouselItem className='w-100 rounded' src={"images/" + element.type + "/" + element.image} width='200' alt="Un problème est survenu lors du chargement." itemId={element.id} key={element.id}>
                                     <div className='row'>
                                         <div className='col'>
                                         </div>
