@@ -21,6 +21,16 @@
       "id": 2
     },
     {
+      "nomArticle": "yuuyuyu",
+      "Description": "uyuyuyk",
+      "Prix": 222,
+      "type": "casque",
+      "Disponibilite": "oui",
+      "PrixPromotion": "yuyuuyu",
+      "image": "rio-cross.jpeg",
+      "id": 3
+    },
+    {
       "nomArticle": "Bottes AlpinStar",
       "Description": "Super Bottes OMG",
       "Prix": 2000,
@@ -28,7 +38,17 @@
       "Disponibilite": "oui",
       "PrixPromotion": null,
       "image": "image00003.jpeg",
-      "id": 3
+      "id": 4
+    },
+    {
+      "nomArticle": "TRACER 700",
+      "Description": "TRACER 700 NOUVEAU PRESQUE NEUF",
+      "Prix": 180000,
+      "type": "motos",
+      "Disponibilite": "oui",
+      "PrixPromotion": null,
+      "image": "tracer.png",
+      "id": 5
     }
   ]
 }

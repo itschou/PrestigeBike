@@ -67,7 +67,7 @@ class Home extends React.Component {
 
         return (
             <>
-                <div className='' id='session1'>
+                <div id='session1'>
                     <div className='row'>
                         <div className='col-7 p-2'>
                             <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
@@ -221,10 +221,15 @@ function Boutiques() {
     const [type, setType] = useState('Tous');
     const [articles, setArticles] = useState([])
 
+
     useEffect(() => {
         axios.get(baseURL).then((res) => { setArticles(res.data) })
+        
     }, [])
 
+    const redTypes = articles.map((e)=> (e.type))
+    const Filtred = [...new Set(redTypes)]
+    
 
     return (
         
@@ -237,7 +242,7 @@ function Boutiques() {
                 <h3 className='text-center text-light bg-dark'>Choisir une catégorie</h3>
                 <select className='form-select w-25 text-center mx-auto' onChange={(element) => { setType(element.target.value) }}>
                     <option value="Tous">Tous</option>
-                    {articles.map((element, index) => { return <option key={index}>{element.type}</option> })}
+                    {Filtred.map((element, index) => { return <option key={index}>{element}</option> })}
 
                 </select>
             </div>
@@ -290,6 +295,7 @@ function Boutiques() {
                                                         <div className='thumb-content'>
                                                             <h4 className='text-uppercase'>{element.nomArticle}</h4>
                                                             <p className='card-text bg-light rounded text-success'><b>{element.Prix} DH</b> {element.PrixPromotion === "" ? <strong><strike><i className='text-danger'></i></strike></strong> : <strong><strike><i className='text-danger'>{element.PrixPromotion}</i></strike></strong>}</p>
+                                                            <p className='text-dark text-uppercase p-2'>{element.Description}</p>
                                                             <p className='item-price'> <div className='col'>
                                                                 {element.Disponibilite === "oui" ? <button type="button" className='btn btn-primary btn-block' onClick={() => { document.getElementById('sommeall').innerHTML = "Total : " + (somme += element.Prix) + "DH" }}>Ajouter</button> : <button type="button" className='btn btn-danger btn-block' onClick={() => alert('Désolé mais ce produit est épuisé !')}>ÉPUISÉ</button>}
                                                             </div></p>
@@ -329,26 +335,29 @@ function Articles() {
         axios.get(baseURL).then((res) => { setArticles(res.data) })
     }, [])
 
+
+    console.log(result)
+
     return (
         <div>
             <div className='container w-50'>
                 <h1 className='text-center text-dark text-uppercase'>Derniers articles</h1><br />
                 <MDBCarousel dark >
                     {
-                        articles.map(element => {
-                            return (
-                                <MDBCarouselItem className='w-100 rounded' src={"images/" + element.type + "/" + element.image} width='200' alt="Un problème est survenu lors du chargement." itemId={element.id} key={element.id}>
+                        LastProduct.map((element) => {
+                                return (
+                                    <MDBCarouselItem className='w-100 rounded' src={"images/" + result.type + "/" + result.image} width='200' alt="Un problème est survenu lors du chargement." itemId={result.id} key={result.id}>
                                     <div className='row'>
                                         <div className='col'>
                                         </div>
                                         <div className='col'>
-                                            <h5 className='text-light text-uppercase bg-success rounded p-2'>{element.nomArticle}</h5>
-                                            <h1 className='text-light'><b>{element.Prix}</b> DH</h1>
+                                            <h5 className='text-light text-uppercase bg-success rounded p-2'>{result.nomArticle}</h5>
+                                            <h1 className='text-light'><b>{result.Prix}</b> DH</h1>
                                         </div>
                                     </div>
                                 </MDBCarouselItem>
                             )
-                        })
+                         })
                     }
                 </MDBCarousel>
             </div>
