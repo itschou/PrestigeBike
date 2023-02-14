@@ -114,3 +114,21 @@ html{
   background-color: #FFF;
   color: #122;
 }
+
+
+
+.image-size{
+  width: 800px;
+  height: 500px;
+  object-fit: fill;
+}
+
+.image-size-product{
+  width: 150px;
+  height: 150;
+  object-fit: fill;
+}
+
+a.linkarticle{
+  text-decoration: none;
+}

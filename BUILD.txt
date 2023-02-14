@@ -1,0 +1,2 @@
+Install command : npm install -g serve
+Run command : serve -s build

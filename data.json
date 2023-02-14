@@ -1,54 +1,374 @@
 {
   "produits": [
     {
-      "nomArticle": "yuuyuyu",
-      "Description": "uyuyuy",
-      "Prix": 11,
+      "nomArticle": "Casque agv k1 noir brillant",
+      "Description": " S M L XL",
+      "Prix": 1890,
       "type": "casque",
       "Disponibilite": "oui",
-      "PrixPromotion": "yuyuuyu",
-      "image": "cms-cross.jpeg",
-      "id": 1
+      "PrixPromotion": 2400,
+      "image": "IMG_20221212_190501_861.jpg",
+      "id": 8
     },
     {
-      "nomArticle": "yuuyuyu",
-      "Description": "uyuyuyk",
-      "Prix": 222,
+      "nomArticle": "casque agv k1 noir matt",
+      "Description": " S M L XL",
+      "Prix": 1890,
       "type": "casque",
       "Disponibilite": "oui",
-      "PrixPromotion": "yuyuuyu",
-      "image": "rio-cross.jpeg",
-      "id": 2
+      "PrixPromotion": 2400,
+      "image": "20221212_182007.jpg",
+      "id": 9
     },
     {
-      "nomArticle": "yuuyuyu",
-      "Description": "uyuyuyk",
-      "Prix": 222,
-      "type": "casque",
-      "Disponibilite": "oui",
-      "PrixPromotion": "yuyuuyu",
-      "image": "rio-cross.jpeg",
-      "id": 3
-    },
-    {
-      "nomArticle": "Bottes AlpinStar",
-      "Description": "Super Bottes OMG",
-      "Prix": 2000,
-      "type": "bottes",
+      "nomArticle": "les gants fox",
+      "Description": " M L XL",
+      "Prix": 150,
+      "type": "gants",
       "Disponibilite": "oui",
       "PrixPromotion": null,
-      "image": "image00003.jpeg",
-      "id": 4
+      "image": "20221213_125413.jpg",
+      "id": 10
     },
     {
-      "nomArticle": "TRACER 700",
-      "Description": "TRACER 700 NOUVEAU PRESQUE NEUF",
-      "Prix": 180000,
-      "type": "motos",
+      "nomArticle": "les gants city bleu",
+      "Description": "L XL",
+      "Prix": 170,
+      "type": "gants",
       "Disponibilite": "oui",
       "PrixPromotion": null,
-      "image": "tracer.png",
-      "id": 5
+      "image": "0.jpg",
+      "id": 11
+    },
+    {
+      "nomArticle": "LES GANTS CUIR",
+      "Description": "L  en 2eme main",
+      "Prix": 140,
+      "type": "gants",
+      "Disponibilite": "oui",
+      "PrixPromotion": null,
+      "image": "20221213_131532.jpg",
+      "id": 12
+    },
+    {
+      "nomArticle": "LES GANTS AXIO NOIR",
+      "Description": "L XL",
+      "Prix": 100,
+      "type": "gants",
+      "Disponibilite": "oui",
+      "PrixPromotion": null,
+      "image": "20221213_130439.jpg",
+      "id": 13
+    },
+    {
+      "nomArticle": "LES GANTS SPORT S ",
+      "Description": "NOIR ",
+      "Prix": 80,
+      "type": "gants",
+      "Disponibilite": "oui",
+      "PrixPromotion": null,
+      "image": "20221213_134950.jpg",
+      "id": 14
+    },
+    {
+      "nomArticle": "LES GANTS NEXX",
+      "Description": "M L XL",
+      "Prix": 120,
+      "type": "gants",
+      "Disponibilite": "oui",
+      "PrixPromotion": null,
+      "image": "20221213_125637.jpg",
+      "id": 15
+    },
+    {
+      "nomArticle": "LES GANTS ALPINESTARS",
+      "Description": "L XL",
+      "Prix": 120,
+      "type": "gants",
+      "Disponibilite": "oui",
+      "PrixPromotion": null,
+      "image": "20221213_130029.jpg",
+      "id": 16
+    },
+    {
+      "nomArticle": "LES GANTS AOM",
+      "Description": "imperméable ",
+      "Prix": 290,
+      "type": "gants",
+      "Disponibilite": "oui",
+      "PrixPromotion": null,
+      "image": "20221213_130636.jpg",
+      "id": 17
+    },
+    {
+      "nomArticle": "CASQUE AGV K1 SOLELUNA",
+      "Description": "L",
+      "Prix": 2450,
+      "type": "casque",
+      "Disponibilite": "oui",
+      "PrixPromotion": 3290,
+      "image": "20221213_140606.jpg",
+      "id": 18
+    },
+    {
+      "nomArticle": "CASQUE AGV K1 SPEED 46",
+      "Description": "MS",
+      "Prix": 2450,
+      "type": "casque",
+      "Disponibilite": "oui",
+      "PrixPromotion": 3290,
+      "image": "20221213_140746.jpg",
+      "id": 19
+    },
+    {
+      "nomArticle": "CASQUE AGV COMPACT ST NOIR MATT",
+      "Description": "S M L",
+      "Prix": 2590,
+      "type": "casque",
+      "Disponibilite": "oui",
+      "PrixPromotion": 3490,
+      "image": "20221213_141212.jpg",
+      "id": 20
+    },
+    {
+      "nomArticle": "CACHE SELECTEUR PROTAPER",
+      "Description": "  ",
+      "Prix": 40,
+      "type": "accessoires moto",
+      "Disponibilite": "oui",
+      "PrixPromotion": null,
+      "image": "IMG-20221111-WA0018.jpg",
+      "id": 21
+    },
+    {
+      "nomArticle": "support de plaque rizoma",
+      "Description": "repliable avec lampe led",
+      "Prix": 220,
+      "type": "accessoires moto",
+      "Disponibilite": "oui",
+      "PrixPromotion": 290,
+      "image": "20221213_142342.jpg",
+      "id": 22
+    },
+    {
+      "nomArticle": "blouson en cuir dainese racing 3",
+      "Description": " ",
+      "Prix": 5290,
+      "type": "blouson",
+      "Disponibilite": "oui",
+      "PrixPromotion": 6860,
+      "image": "20221214_111300.jpg",
+      "id": 23
+    },
+    {
+      "nomArticle": "blouson en cuir dainese racing 3",
+      "Description": " ",
+      "Prix": 5290,
+      "type": "blouson",
+      "Disponibilite": "oui",
+      "PrixPromotion": 6860,
+      "image": "20221214_113705.jpg",
+      "id": 24
+    },
+    {
+      "nomArticle": "casque astone gt3 INTEGRAL",
+      "Description": " S M L XL",
+      "Prix": 1099,
+      "type": "casque",
+      "Disponibilite": "oui",
+      "PrixPromotion": 1500,
+      "image": "20221214_114642.jpg",
+      "id": 25
+    },
+    {
+      "nomArticle": "bluetooth cardo spirit",
+      "Description": "  ",
+      "Prix": 1199,
+      "type": "bluetooth",
+      "Disponibilite": "oui",
+      "PrixPromotion": null,
+      "image": "20221214_120129.jpg",
+      "id": 26
+    },
+    {
+      "nomArticle": "bluetooth cardo spirit duo",
+      "Description": "  ",
+      "Prix": 2299,
+      "type": "bluetooth",
+      "Disponibilite": "oui",
+      "PrixPromotion": null,
+      "image": "20221214_120207.jpg",
+      "id": 27
+    },
+    {
+      "nomArticle": "bluetooth cardo spirit hd",
+      "Description": " ",
+      "Prix": 1699,
+      "type": "bluetooth",
+      "Disponibilite": "oui",
+      "PrixPromotion": null,
+      "image": "20221214_121410.jpg",
+      "id": 28
+    },
+    {
+      "nomArticle": "bluetooth cardo spirit hd duo",
+      "Description": "  ",
+      "Prix": 3299,
+      "type": "bluetooth",
+      "Disponibilite": "oui",
+      "PrixPromotion": null,
+      "image": "20221214_121251.jpg",
+      "id": 29
+    },
+    {
+      "nomArticle": "bluetooth sena smh5",
+      "Description": " ",
+      "Prix": 1249,
+      "type": "bluetooth",
+      "Disponibilite": "oui",
+      "PrixPromotion": 1550,
+      "image": "20221214_124141.jpg",
+      "id": 30
+    },
+    {
+      "nomArticle": "bluetooth midland btx1 pro s",
+      "Description": "  ",
+      "Prix": 1480,
+      "type": "bluetooth",
+      "Disponibilite": "oui",
+      "PrixPromotion": 1890,
+      "image": "20221214_125520.jpg",
+      "id": 31
+    },
+    {
+      "nomArticle": "béquille et lève moto ",
+      "Description": "arrière et avant ",
+      "Prix": 650,
+      "type": "pièces moto",
+      "Disponibilite": "oui",
+      "PrixPromotion": 890,
+      "image": "20221215_110531.jpg",
+      "id": 32
+    },
+    {
+      "nomArticle": "radiateur kawazaki",
+      "Description": "z750 / z800 / z1000",
+      "Prix": 1650,
+      "type": "radiateur",
+      "Disponibilite": "oui",
+      "PrixPromotion": null,
+      "image": "20221215_123705.jpg",
+      "id": 33
+    },
+    {
+      "nomArticle": "radiateur yamaha",
+      "Description": "mt09",
+      "Prix": 1750,
+      "type": "radiateur",
+      "Disponibilite": "oui",
+      "PrixPromotion": null,
+      "image": "20221215_123742.jpg",
+      "id": 34
+    },
+    {
+      "nomArticle": "cache radiateur Kawasaki ",
+      "Description": "z750 z800 z1000",
+      "Prix": 449,
+      "type": "radiateur",
+      "Disponibilite": "oui",
+      "PrixPromotion": 589,
+      "image": "20221215_123853.jpg",
+      "id": 35
+    },
+    {
+      "nomArticle": "cache radiateur kawasaki",
+      "Description": "z900",
+      "Prix": 499,
+      "type": "radiateur",
+      "Disponibilite": "oui",
+      "PrixPromotion": 630,
+      "image": "20221215_123832.jpg",
+      "id": 36
+    },
+    {
+      "nomArticle": "cache radiateur bmw",
+      "Description": "gs adventure 1200",
+      "Prix": 450,
+      "type": "radiateur",
+      "Disponibilite": "non",
+      "PrixPromotion": null,
+      "image": "20221215_124001.jpg",
+      "id": 37
+    },
+    {
+      "nomArticle": "cache radiateur kawasaki",
+      "Description": "er6n",
+      "Prix": 449,
+      "type": "radiateur",
+      "Disponibilite": "oui",
+      "PrixPromotion": null,
+      "image": "20221215_123919.jpg",
+      "id": 38
+    },
+    {
+      "nomArticle": "cache radiateur yamaha",
+      "Description": "mt09",
+      "Prix": 449,
+      "type": "radiateur",
+      "Disponibilite": "oui",
+      "PrixPromotion": 580,
+      "image": "20221215_123804.jpg",
+      "id": 39
+    },
+    {
+      "nomArticle": "radiateur suzuki ",
+      "Description": "gsxr 600 750",
+      "Prix": 1900,
+      "type": "radiateur",
+      "Disponibilite": "oui",
+      "PrixPromotion": 2300,
+      "image": "20221215_134004.jpg",
+      "id": 40
+    },
+    {
+      "nomArticle": "radiateur yamaha",
+      "Description": "xtx660",
+      "Prix": 1800,
+      "type": "radiateur",
+      "Disponibilite": "oui",
+      "PrixPromotion": 2200,
+      "image": "20221215_134504.jpg",
+      "id": 41
+    },
+    {
+      "nomArticle": "bluetooth casque bt-12",
+      "Description": "  ",
+      "Prix": 250,
+      "type": "bluetooth",
+      "Disponibilite": "oui",
+      "PrixPromotion": null,
+      "image": "20221215_140036.jpg",
+      "id": 42
+    },
+    {
+      "nomArticle": "bluetooth casque bt-8",
+      "Description": "  ",
+      "Prix": 180,
+      "type": "bluetooth",
+      "Disponibilite": "oui",
+      "PrixPromotion": null,
+      "image": "20221215_140056.jpg",
+      "id": 43
+    },
+    {
+      "nomArticle": "les gants city noir",
+      "Description": "M L XL",
+      "Prix": 170,
+      "type": "gants",
+      "Disponibilite": "oui",
+      "PrixPromotion": null,
+      "image": "20221215_142709.jpg",
+      "id": 44
     }
   ]
 }

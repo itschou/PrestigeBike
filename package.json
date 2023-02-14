@@ -1,5 +1,6 @@
 {
   "name": "apld",
+  "homepage": ".",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -7,12 +8,18 @@
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
     "axios": "^1.1.3",
+    "cors": "^2.8.5",
+    "crypto-js": "^3.1.9-1",
+    "firebase": "^9.16.0",
     "json-server": "^0.17.1",
     "mdb-react-ui-kit": "^5.0.0",
+    "mysql2": "^3.0.1",
     "react": "^18.2.0",
+    "react-bootstrap": "^2.7.0",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.4.3",
     "react-scripts": "5.0.1",
+    "util": "^0.12.5",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
